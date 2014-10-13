@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!-- This file is part of account_move_line_related module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="ir.action.act_window" id="act_move_line_form">
+            <field name="name">Account Moves Lines</field>
+            <field name="res_model">account.move.line</field>
+            <field name="search_value">[('create_date', '>=', DateTime(hour=0, minute=0, second=0, microsecond=0, delta_years=-1))]</field>
+        </record>
+        <menuitem parent="account.menu_entries" action="act_move_line_form"
+            id="menu_move_line_form" icon="tryton-list"/>
+
+        <record model="ir.action.act_window" id="act_move_line">
+            <field name="name">Move Lines</field>
+            <field name="res_model">account.move.line</field>
+            <field name="domain">[('account', 'in', Eval('active_ids'))]</field>
+            <field name="search_value">[('create_date', '>=', DateTime(hour=0, minute=0, second=0, microsecond=0, delta_years=-1))]</field>
+        </record>
+        <record model="ir.action.keyword" id="act_move_line_keyword1">
+            <field name="keyword">form_relate</field>
+            <field name="model">account.account,-1</field>
+            <field name="action" ref="act_move_line"/>
+        </record>
+
+        <record model="ir.action.act_window"
+                id="act_move_line_all_payable_receivable">
+            <field name="name">All Payable/Receivable Lines</field>
+            <field name="res_model">account.move.line</field>
+            <field name="domain">[('party', 'in', Eval('active_ids')), ('account.kind', 'in', ['payable', 'receivable'])]</field>
+            <field name="search_value">[('create_date', '>=', DateTime(hour=0, minute=0, second=0, microsecond=0, delta_years=-1))]</field>
+        </record>
+        <record model="ir.action.act_window.domain"
+                id="act_move_line_all_payable_receivable_domain_payable">
+            <field name="name">Payable</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain">[('account.kind', '=', 'payable')]</field>
+            <field name="act_window" ref="act_move_line_all_payable_receivable"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+                id="act_move_line_all_payable_receivable_domain_receivable">
+            <field name="name">Receivable</field>
+            <field name="sequence" eval="20"/>
+            <field name="domain">[('account.kind', '=', 'receivable')]</field>
+            <field name="act_window" ref="act_move_line_all_payable_receivable"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+                id="act_move_line_all_payable_receivable_domain_all">
+            <field name="name">All</field>
+            <field name="sequence" eval="9999"/>
+            <field name="act_window" ref="act_move_line_all_payable_receivable"/>
+        </record>
+        <record model="ir.action.keyword"
+                id="act_move_line_all_payable_receivable_keyword1">
+            <field name="keyword">form_relate</field>
+            <field name="model">party.party,-1</field>
+            <field name="action" ref="act_move_line_all_payable_receivable"/>
+        </record>
+    </data>
+</tryton>

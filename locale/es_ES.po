@@ -1,0 +1,34 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "model:ir.action,name:act_move_line"
+msgid "Move Lines"
+msgstr "Apuntes"
+
+msgctxt "model:ir.action,name:act_move_line_all_payable_receivable"
+msgid "All Payable/Receivable Lines"
+msgstr "Apuntes a pagar/cobrar - Todos"
+
+msgctxt "model:ir.action,name:act_move_line_form"
+msgid "Account Moves Lines"
+msgstr "Apuntes contables"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_move_line_all_payable_receivable_domain_all"
+msgid "All"
+msgstr "Todos"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_move_line_all_payable_receivable_domain_payable"
+msgid "Payable"
+msgstr "A pagar"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_move_line_all_payable_receivable_domain_receivable"
+msgid "Receivable"
+msgstr "A cobrar"
+
+msgctxt "model:ir.ui.menu,name:menu_move_line_form"
+msgid "Account Moves Lines"
+msgstr "Apuntes contables"
