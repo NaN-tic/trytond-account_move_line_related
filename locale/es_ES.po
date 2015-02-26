@@ -2,6 +2,14 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
+msgctxt "field:party.party,payable_lines:"
+msgid "Payable Lines"
+msgstr "Apuntes a pagar"
+
+msgctxt "field:party.party,receivable_lines:"
+msgid "Receivable Lines"
+msgstr "Apuntes a cobrar"
+
 msgctxt "model:ir.action,name:act_move_line"
 msgid "Move Lines"
 msgstr "Apuntes"

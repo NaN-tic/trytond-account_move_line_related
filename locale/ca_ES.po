@@ -2,22 +2,30 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
+msgctxt "field:party.party,payable_lines:"
+msgid "Payable Lines"
+msgstr "Apuntes a pagar"
+
+msgctxt "field:party.party,receivable_lines:"
+msgid "Receivable Lines"
+msgstr "Apuntes a cobrar"
+
 msgctxt "model:ir.action,name:act_move_line"
 msgid "Move Lines"
-msgstr "Apunts"
+msgstr "Apuntes"
 
 msgctxt "model:ir.action,name:act_move_line_all_payable_receivable"
 msgid "All Payable/Receivable Lines"
-msgstr "Apunts a pagar/cobrar - Tots"
+msgstr "Apuntes a pagar/cobrar - Todos"
 
 msgctxt "model:ir.action,name:act_move_line_form"
 msgid "Account Moves Lines"
-msgstr "Apunts comptables"
+msgstr "Apuntes contables"
 
 msgctxt ""
 "model:ir.action.act_window.domain,name:act_move_line_all_payable_receivable_domain_all"
 msgid "All"
-msgstr "Tots"
+msgstr "Todos"
 
 msgctxt ""
 "model:ir.action.act_window.domain,name:act_move_line_all_payable_receivable_domain_payable"
@@ -31,4 +39,4 @@ msgstr "A cobrar"
 
 msgctxt "model:ir.ui.menu,name:menu_move_line_form"
 msgid "Account Moves Lines"
-msgstr "Apunts comptables"
+msgstr "Apuntes contables"
