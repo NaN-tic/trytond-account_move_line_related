@@ -7,8 +7,7 @@ from trytond.pool import Pool, PoolMeta
 __all__ = ['Party']
 
 
-class Party:
-    __metaclass__ = PoolMeta
+class Party(metaclass=PoolMeta):
     __name__ = 'party.party'
 
     receivable_lines = fields.Function(fields.One2Many('account.move.line',
