@@ -24,8 +24,9 @@ class Party(metaclass=PoolMeta):
 
         if name not in ('receivable_lines', 'payable_lines'):
             raise Exception('Bad argument')
+
         lines = MoveLine.search([
                 ('party', '=', self.id),
-                ('account.kind', '=', name[:-6]),
+                ('account.type.'+name[:-6], '=', True),
                 ('reconciliation', '=', None)])
         return [l.id for l in lines]
