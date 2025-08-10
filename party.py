@@ -10,9 +10,9 @@ __all__ = ['Party']
 class Party(metaclass=PoolMeta):
     __name__ = 'party.party'
 
-    receivable_lines = fields.Function(fields.One2Many('account.move.line',
+    receivable_lines = fields.Function(fields.Many2Many('account.move.line',
             None, 'Receivable Lines'), 'get_receivable_payable_lines')
-    payable_lines = fields.Function(fields.One2Many('account.move.line',
+    payable_lines = fields.Function(fields.Many2Many('account.move.line',
             None, 'Payable Lines'), 'get_receivable_payable_lines')
 
     def get_receivable_payable_lines(self, name):
