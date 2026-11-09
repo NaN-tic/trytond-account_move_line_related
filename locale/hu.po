@@ -1,0 +1,28 @@
+#
+msgid ""
+msgstr ""
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "field:party.party,payable_lines:"
+msgid "Payable Lines"
+msgstr "Kötelezettségsorok"
+
+msgctxt "field:party.party,receivable_lines:"
+msgid "Receivable Lines"
+msgstr "Követeléssorok"
+
+msgctxt "model:ir.action,name:act_move_line"
+msgid "Move Lines"
+msgstr "Könyvelési tételek"
+
+msgctxt "model:ir.action,name:act_move_line_form"
+msgid "Account Moves Lines"
+msgstr "Könyvelési sorok"
+
+msgctxt "model:ir.ui.menu,name:menu_move_line_form"
+msgid "Account Moves Lines"
+msgstr "Könyvelési sorok"
